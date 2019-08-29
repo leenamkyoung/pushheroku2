@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY','vadzo+k79ac@x6byni57&ar$+ns3t&r
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 
-ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'fi.apps.FiConfig',
     'part.apps.PartConfig',
     'py.apps.PyConfig',
+    'rest_framework',
+    'rest_framework_swagger',
+    'debug_toolbar',
 ]
 
 MIDDLEWARE = [
